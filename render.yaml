@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: TG-File-Store
+    runtime: python
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app & python3 bot.py
+    autoDeploy: false
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: BOT_TOKEN
+        sync: false
+      - key: API_HASH 
+        sync: false
+      - key: API_ID 
+        sync: false
+      - key: DB_CHANNEL_ID 
+        sync: false
+      - key: UPDATE_CHANNEL
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: IS_PRIVATE
+        sync: false
+      - key: AUTH_USERS
+        sync: false
+
+    plan: free
