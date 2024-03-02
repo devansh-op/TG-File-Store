@@ -3,6 +3,6 @@ Pyromod
 TgCrypto
 psycopg2-binary
 sqlalchemy==1.3.23
-Falsk==2.2.2
+Falsk==3.0.2
 gunicorn==20.1.0
 aiohp==3.1.8
